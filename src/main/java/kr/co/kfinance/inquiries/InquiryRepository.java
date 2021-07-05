@@ -1,6 +1,6 @@
 package kr.co.kfinance.inquiries;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface InquiryRepository extends CrudRepository<Inquiry, Long> {
+public interface InquiryRepository extends JpaRepository<Inquiry, Long> {
 }

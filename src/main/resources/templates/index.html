@@ -23,13 +23,35 @@
 <button onclick="save()">저장</button>
 </body>
 <script>
+    jQuery.fn.serializeObject = function () {
+        var obj = null;
+        try {
+            if (this[0].tagName && this[0].tagName.toUpperCase() == "FORM") {
+                var arr = this.serializeArray();
+                if (arr) {
+                    obj = {};
+                    jQuery.each(arr, function () {
+                        obj[this.name] = this.value;
+                    });
+                }//if ( arr ) {
+            }
+        } catch (e) {
+            alert(e.message);
+        } finally {
+        }
+
+        return obj;
+    };
+
     function save() {
         $.ajax(
             {
                 url: '/inquiry',
                 method: 'POST',
-                data: $("#form").serialize(),
-                complete: function(xhr, status) {
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify($("#form").serializeObject()),
+                complete: function (xhr, status) {
                     console.log(xhr);
                     console.log(status);
                 }
