@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테스트</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>'ㅁ'</h1>
+<form id="form">
+    <p>
+        <label>
+            이름 : <input type="text" name="name">
+        </label>
+    </p>
+    <p>
+        <label>
+            전화번호 : <input type="tel" name="tel">
+        </label>
+    </p>
+</form>
+<button onclick="save()">저장</button>
+</body>
+<script>
+    function save() {
+        $.ajax(
+            {
+                url: '/inquiry',
+                method: 'POST',
+                data: $("#form").serialize(),
+                complete: function(xhr, status) {
+                    console.log(xhr);
+                    console.log(status);
+                }
+            }
+        );
+    }
+</script>
+</html>
