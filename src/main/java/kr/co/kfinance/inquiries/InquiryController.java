@@ -1,5 +1,6 @@
 package kr.co.kfinance.inquiries;
 
+import kr.co.kfinance.telegram.TelegramMessageSender;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,8 @@ public class InquiryController {
 
 	final InquiryRepository inquiryRepository;
 
+	final TelegramMessageSender telegramMessageSender;
+
 	final ModelMapper modelMapper;
 
 	@PostMapping
@@ -21,6 +24,8 @@ public class InquiryController {
 		Inquiry inquiry = modelMapper.map(inquiryDto, Inquiry.class);
 
 		inquiryRepository.save(inquiry);
+
+		telegramMessageSender.sendMessage(inquiryDto);
 
 		return ResponseEntity.ok("ok");
 	}
