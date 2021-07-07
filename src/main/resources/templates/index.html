@@ -1,66 +1,3 @@
-<!--<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>테스트</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-</head>
-<body>
-<h1>'ㅁ'!</h1>
-<form id="form">
-    <p>
-        <label>
-            이름 : <input type="text" name="name">
-        </label>
-    </p>
-    <p>
-        <label>
-            전화번호 : <input type="tel" name="tel">
-        </label>
-    </p>
-</form>
-<button onclick="save()">저장</button>
-</body>
-<script>
-    jQuery.fn.serializeObject = function () {
-        var obj = null;
-        try {
-            if (this[0].tagName && this[0].tagName.toUpperCase() == "FORM") {
-                var arr = this.serializeArray();
-                if (arr) {
-                    obj = {};
-                    jQuery.each(arr, function () {
-                        obj[this.name] = this.value;
-                    });
-                }//if ( arr ) {
-            }
-        } catch (e) {
-            alert(e.message);
-        } finally {
-        }
-
-        return obj;
-    };
-
-    function save() {
-        $.ajax(
-            {
-                url: '/inquiry',
-                method: 'POST',
-                dataType: 'json',
-                contentType: 'application/json',
-                data: JSON.stringify($("#form").serializeObject()),
-                complete: function (xhr, status) {
-                    console.log(xhr);
-                    console.log(status);
-                }
-            }
-        );
-    }
-</script>
-</html>-->
-
-
 <html class="no-js" lang="ko">
 <head>
     <meta charset="utf-8">
@@ -178,7 +115,7 @@
 			</div>
 		</div>
 		<div class="form-box">
-			<form method="post" action="./update.php" id="frm" onsubmit="return fCheck(this);" autocomplete="off" >
+			<form method="post" action="./inquiry" id="frm" autocomplete="off" >
 				<input type="hidden" name="code" value="1555">
 				<input type="hidden" name="ftype" value="form114">
 				<input type="hidden" name="sql_print" value="">
@@ -277,51 +214,51 @@
 							<div class="col-4">					
 								<div class="label-radio-group">
 									<input type="radio" name="top_bank" id="top_bank_1" value="은행&보험사">
-									<label class="label-radio"  for="top_bank_1" style=" font-size:12px">							
+									<label class="label-radio"  for="top_bank_1" style=" font-size:12px">
 										은행&보험사
 									</label>
 								</div>
-							</div>	
-							<div class="col-4">					
+							</div>
+							<div class="col-4">
 								<div class="label-radio-group">
 									<input type="radio" name="top_bank" id="top_bank_2" value="저축은행&캐피탈">
-									<label class="label-radio"  for="top_bank_2" style=" font-size:12px">							
+									<label class="label-radio"  for="top_bank_2" style=" font-size:12px">
 										저축은행&캐피탈
 									</label>
 								</div>
-							</div>	
-							<div class="col-4">					
+							</div>
+							<div class="col-4">
 								<div class="label-radio-group">
 									<input type="radio" name="top_bank" id="top_bank_3" value="카드사">
-									<label class="label-radio"  for="top_bank_3" style=" font-size:12px">							
+									<label class="label-radio"  for="top_bank_3" style=" font-size:12px">
 										카드사
 									</label>
 								</div>
-							</div>	
+							</div>
 						</div>
 					</div>
-					
+
 					<div class="form-group">
 						<label class="form-label">신용카드</label>
 						<div class="form-row">
 							<div class="col-6">
 								<div class="label-radio-group">
 									<input type="radio" name="card" id="card_1" value="미보유">
-									<label class="label-radio"  for="card_1">							
+									<label class="label-radio"  for="card_1">
 										미보유
 									</label>
 								</div>
-							</div>						
+							</div>
 							<div class="col-6">
 								<div class="label-radio-group">
 									<input type="radio" name="card" id="card_2" value="보유">
-									<label class="label-radio"  for="card_2">							
+									<label class="label-radio"  for="card_2">
 										보유
 									</label>
 								</div>
-							</div>			
+							</div>
 						</div>
-					</div>		
+					</div>
 					<div class="form-group">
 						<label for="name" class="form-label">이름</label>
 						<input type="text" name="name" id="name" class="form-control" required>
@@ -351,7 +288,7 @@
 						<div class="inputs-group">
 							<div class="label-check-group">
 								<input type="checkbox" name="agree" id="agree" value="1" checked>
-								<label class="label-check"  for="agree">					
+								<label class="label-check"  for="agree">
 									개인정보수집항목 이용 동의
 								</label>
 							</div>
@@ -367,57 +304,58 @@
 	▶ 개인정보의 보유 및 이용기간<br />
 	- 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 시 지체 없이 파기합니다.<br />
 	- 다만, 원활한 서비스의 상담을 위해 상담 완료 후 내용을 3개월간 보유할 수 있으며<br />
-	   전자상거래에서의 소비자보호에 관한 법률 등 타법률에 의해 보존할 필요가 있는 경우에는 일정기간 보존합니다.						</div> 
+	   전자상거래에서의 소비자보호에 관한 법률 등 타법률에 의해 보존할 필요가 있는 경우에는 일정기간 보존합니다.						</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn-submit">채무통합 신청하기</button>
+						<button type="button" class="btn-submit" onclick="fCheck()">채무통합 신청하기</button>
 					</div>
 				</div>
 			</form>
 		</div>
 		<script>
-			function fCheck(f){
+			function fCheck(){
+				var f = $("#frm").get(0);
 				form_check(f);
-				
+
 				if(f.type.value == ''){
 					alert("4대보험 항목을 선택해주세요");
 					return false;
 				};
-				
-				if(f.top_rate.value == ''){
+
+				/*if(f.top_rate.value == ''){
 					alert("보유하고 계신 최고금리를 선택해주세요");
 					return false;
-				};
-				
+				};*/
+
 				if(f.card.value == ''){
 					alert("신용카드 유무를 선택해주세요");
 					return false;
 				};
-				
+
 				if(f.type.value == '미가입'){
-					
+
 					if(!f.house.value){
 						alert("자가보유를 선택해주세요");
 						return false;
 					};
-					
+
 					if(f.house.value == '미보유'){
 						alert("신청이 완료되었습니다.");
 						window.location.reload();
 						return false;
 					};
-									
-					
+
+
 				};
-				
-				
-				if(f.top_rate.value == '4~7%'){
+
+
+				/*if(f.top_rate.value == '4~7%'){
 					if(!f.top_bank.value){
 						alert('보유 최고금리 중 가장 높은 금융기관을 입력해주세요');
 						return false;
 					};
-				};
+				};*/
 							
 				
 				if(!f.agree.value){
@@ -427,7 +365,7 @@
 				
 				
 				
-				
+				save();
 			};
 			
 			
@@ -716,6 +654,44 @@ function form_check(f){
 		
 	return "";	
 }
+</script>
+
+<script>
+	jQuery.fn.serializeObject = function () {
+		var obj = null;
+		try {
+			if (this[0].tagName && this[0].tagName.toUpperCase() == "FORM") {
+				var arr = this.serializeArray();
+				if (arr) {
+					obj = {};
+					jQuery.each(arr, function () {
+						obj[this.name] = this.value;
+					});
+				}//if ( arr ) {
+			}
+		} catch (e) {
+			alert(e.message);
+		} finally {
+		}
+
+		return obj;
+	};
+
+	function save() {
+		$.ajax(
+				{
+					url: '/inquiry',
+					method: 'POST',
+					dataType: 'json',
+					contentType: 'application/json',
+					data: JSON.stringify($("#frm").serializeObject()),
+					complete: function (xhr, status) {
+						console.log(xhr);
+						console.log(status);
+					}
+				}
+		);
+	}
 </script>
 
 </body>
