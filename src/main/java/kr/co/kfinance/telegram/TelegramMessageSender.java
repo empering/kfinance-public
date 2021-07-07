@@ -16,19 +16,13 @@ import java.util.List;
 public class TelegramMessageSender {
 	final TelegramBot telegramBot;
 
-	public void sendMessage(InquiryDto inquiryDto) {
+	public void sendMessage(String message) {
 		List<Update> updates = this.getUpdates();
 
 		for (Update update : updates) {
-			SendMessage sendMessage = new SendMessage(
-					update.message().chat().id(),
-					MessageFormat.format(
-							"name is {0}\ntel is {1}",
-							inquiryDto.getName(),
-							inquiryDto.getTel()
-					)
-			)
-					.disableNotification(false);
+			SendMessage sendMessage =
+					new SendMessage(update.message().chat().id(), message)
+							.disableNotification(false);
 
 			telegramBot.execute(sendMessage);
 		}

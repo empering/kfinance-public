@@ -18,8 +18,11 @@ public class Inquiry {
 	@GeneratedValue
 	private Long id;
 	private String name;
-	private String tel;
+	private String hp;
 	private String email;
+	private String type;
+	private String house;
+	private String card;
 	private LocalDateTime createAt;
 
 }
