@@ -82,108 +82,94 @@
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/page.css">
 	<link rel="stylesheet" href="/css/responsive.css">	
-	
-	<!-- Global site tag (gtag.js) - Google Ads: 448544698 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-448544698"></script>
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	
-	gtag('config', 'AW-448544698');
-</script>
-	 
 
+	<style>
+		.tab-wrap {  }
+		.tab-wrap:after { display:block; content:""; clear:both; }
+		.tab-wrap a { display:block; float:left; width:50%; background-color:#1f3a8b; font-size:16px; padding:15px; text-align:center; color:#fff; }
+		.tab-wrap a.active { background-color:#fff; color:#1f3a8b; }
+
+		.tab-content-wrap {}
+		.tab-content-wrap .tab-content { display:none; }
+		.tab-content-wrap .tab-content.open { display:block; }
+
+		.form-group { margin-bottom:10px; }
+		.form-row { margin-left:-1px; margin-right:-1px; }
+		.form-control {  }
+		.form-label { display:block;}
+
+		.label-radio {  }
+
+		.input-group { position:relative; }
+		.input-group .input-group-text { position:absolute; right:0; top:0;  }
+
+		.form-control,.label-radio,.label-check,.input-group .input-group-text,.input-group .input-group-button { display:block; width:100%; padding:5px 10px; height:50px !important; line-height:40px; font-size:16px; color:#00479d; border:1px solid #00479d; border-radius:0; }
+
+		.form-control:disabled, .form-control[readonly] { background-color:#e6ecfb; }
+
+
+		.form-label { font-size:16px; color:#00479d; font-weight: bold; }
+
+
+		.label-radio { text-align:center; }
+		.label-radio.active { background-color:#5270ff; color:#fff; }
+
+		.form-row:after { display:block; clear:both; content:""; }
+		.col-6 { float:left; width:50%; }
+		.col-4 { float:left; width:33.333%; }
+		.col-12 { float:left; width:100%;  }
+
+		.form-row .col-6,.form-row .col-12,.form-row .col-3,.form-row .col-4 { padding-left:1px; padding-right:1px; }
+
+		.text-red { color:#f65e84; }
+
+		.label-radio-group input[type=radio]:checked+.label-radio { background-color:#00479d; color:#fff; }
+		.label-radio-group input[type=radio] { display:none; }
+
+		.label-check-group input[type=checkbox]:checked+.label-check {  }
+		.label-check-group input[type=checkbox] { display:none; }
+
+		.label-check-group .label-check { position:relative; padding-left:40px; opacity:.5; }
+		.label-check-group .label-check:before { display:inline-block; content:""; background-image:url(./images/cert/check_icon.png); background-size:cover; position:absolute; left:10px; top:16px; width:20px; height:20px; }
+
+
+		.send-cert { display:block; width:100%; height:50px; line-height:40px; padding:5px 10px; background-color:#00479d; color:#fff; text-align:center; }
+
+		input[type=checkbox]:checked+.label-check { opacity:1; }
+
+		.inputs-group { position:relative; }
+		.inputs-group .inputs-group-text { position:absolute; right:0; top:0; padding:0 15px; background-color:transparent; height:50px; line-height:50px; font-size:14px; }
+		.inputs-group .inputs-group-button { position:absolute; right:0; top:0; padding:0 15px; background-color:#0e2549; color:#fff; height:50px; line-height:50px; font-size:14px; }
+
+		.inputs-group .inputs-group-button.bg-gray { background-color:#e6ecfb; border:1px solid #00479d; color:#00479d; }
+		.inputs-group .inputs-group-button.more-btn { background-color:#e6ecfb; border:1px solid #00479d; color:#0e2549; font-size:12px; }
+
+
+		.btn-submit { display:block; width:100%; background-color:#0e2549; border:none; color:#fff; height:60px; line-height:60px; text-align:center; font-size:16px; }
+		.btn-submit.disable { opacity:.5; }
+
+		#form-area {}
+		#form-area .title-box {  }
+		#form-area .title-box .cert-ing { padding:10px; text-align:center; }
+		#form-area .title-box .cert-ing img { width:120px; }
+
+		#form-area .form-box {  }
+		#form-area .form-box .inner { padding:15px; }
+
+		.agree-info { display:none; height:100px; padding:15px; background-color:#e6ecfb; border:1px solid #00479d; overflow-y:auto; color:#333; font-size:14px; }
+
+		.form-sub { color:#e91e1e; font-weight:bold; font-size:16px; }
+	</style>
 </head>
 <body>
-<style>
-	.tab-wrap {  }
-	.tab-wrap:after { display:block; content:""; clear:both; }
-	.tab-wrap a { display:block; float:left; width:50%; background-color:#1f3a8b; font-size:16px; padding:15px; text-align:center; color:#fff; }
-	.tab-wrap a.active { background-color:#fff; color:#1f3a8b; }
-	
-	.tab-content-wrap {}
-	.tab-content-wrap .tab-content { display:none; }
-	.tab-content-wrap .tab-content.open { display:block; }
-	
-		
-</style>
 <div style="max-width:440px; margin:0 auto;">
 		<div class="content" >
 			<p><img class="img-responsive" src="/images/headtitle.png" style=""><br></p>	
 		</div>
 	<div id="form-area">
-	<style>
-		.form-group { margin-bottom:10px; }
-		.form-row { margin-left:-1px; margin-right:-1px; }
-		.form-control {  }
-		.form-label { display:block;}
-		
-		.label-radio {  }
-		
-		.input-group { position:relative; }
-		.input-group .input-group-text { position:absolute; right:0; top:0;  }
-		
-		.form-control,.label-radio,.label-check,.input-group .input-group-text,.input-group .input-group-button { display:block; width:100%; padding:5px 10px; height:50px !important; line-height:40px; font-size:16px; color:#00479d; border:1px solid #00479d; border-radius:0; }
-		
-		.form-control:disabled, .form-control[readonly] { background-color:#e6ecfb; }
-		
-		
-		.form-label { font-size:16px; color:#00479d; font-weight: bold; }
-		
-		
-		.label-radio { text-align:center; }
-		.label-radio.active { background-color:#5270ff; color:#fff; }
-		
-		.form-row:after { display:block; clear:both; content:""; }
-		.col-6 { float:left; width:50%; }
-		.col-4 { float:left; width:33.333%; }
-		.col-12 { float:left; width:100%;  }
-	
-		.form-row .col-6,.form-row .col-12,.form-row .col-3,.form-row .col-4 { padding-left:1px; padding-right:1px; }
-				
-		.text-red { color:#f65e84; }
-		
-		.label-radio-group input[type=radio]:checked+.label-radio { background-color:#00479d; color:#fff; }
-		.label-radio-group input[type=radio] { display:none; }
-		
-		.label-check-group input[type=checkbox]:checked+.label-check {  }	
-		.label-check-group input[type=checkbox] { display:none; }
-		
-		.label-check-group .label-check { position:relative; padding-left:40px; opacity:.5; }
-		.label-check-group .label-check:before { display:inline-block; content:""; background-image:url(./images/cert/check_icon.png); background-size:cover; position:absolute; left:10px; top:16px; width:20px; height:20px; }
-		
-		
-		.send-cert { display:block; width:100%; height:50px; line-height:40px; padding:5px 10px; background-color:#00479d; color:#fff; text-align:center; }
-		
-		input[type=checkbox]:checked+.label-check { opacity:1; }
-		
-		.inputs-group { position:relative; }
-		.inputs-group .inputs-group-text { position:absolute; right:0; top:0; padding:0 15px; background-color:transparent; height:50px; line-height:50px; font-size:14px; }
-		.inputs-group .inputs-group-button { position:absolute; right:0; top:0; padding:0 15px; background-color:#0e2549; color:#fff; height:50px; line-height:50px; font-size:14px; }
-		
-		.inputs-group .inputs-group-button.bg-gray { background-color:#e6ecfb; border:1px solid #00479d; color:#00479d; }
-		.inputs-group .inputs-group-button.more-btn { background-color:#e6ecfb; border:1px solid #00479d; color:#0e2549; font-size:12px; }
-		
-		
-		.btn-submit { display:block; width:100%; background-color:#0e2549; border:none; color:#fff; height:60px; line-height:60px; text-align:center; font-size:16px; }
-		.btn-submit.disable { opacity:.5; }
-		
-		#form-area {}
-		#form-area .title-box {  }
-		#form-area .title-box .cert-ing { padding:10px; text-align:center; }
-		#form-area .title-box .cert-ing img { width:120px; }
-		
-		#form-area .form-box {  }
-		#form-area .form-box .inner { padding:15px; }
-		
-		.agree-info { display:none; height:100px; padding:15px; background-color:#e6ecfb; border:1px solid #00479d; overflow-y:auto; color:#333; font-size:14px; }
-		
-		.form-sub { color:#e91e1e; font-weight:bold; font-size:16px; }
-		
-	</style>
 		<div class="title-box">
 			<!--<img src="/images/title.jpg">-->
 			<img src="/images/maincontent00.jpg">
@@ -416,8 +402,7 @@
 						return false;
 					};
 					
-					
-									if(f.house.value == '미보유'){
+					if(f.house.value == '미보유'){
 						alert("신청이 완료되었습니다.");
 						window.location.reload();
 						return false;
