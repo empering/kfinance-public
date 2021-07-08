@@ -458,8 +458,16 @@ function form_check(f){
 </script>
 <script>
 	$(document).ready(function(){
-		$('#contents>article').addClass("show");
-	})
+      var cont = $('#contents>article');
+      $(window).scroll(function(){
+        var st = $(this).scrollTop();
+        for(var i = 0 ; i <cont.length; i++){
+          if(st >= cont.eq(i).offset().top - $(window).height()/1.5 ){
+              cont.eq(i).addClass("show");
+          }
+        }
+      })
+    })
 </script>
 
 </body>
