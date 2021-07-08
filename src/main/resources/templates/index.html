@@ -288,8 +288,8 @@
 					<div class="form-group agree-group">
 						<div class="inputs-group">
 							<div class="label-check-group">
-								<input type="checkbox" name="agree" id="agree" value="1" checked>
-								<label class="label-check"  for="agree">
+								<input type="checkbox" name="agree" id="agree" >
+								<label class="label-check" for="agree">
 									개인정보수집항목 이용 동의
 								</label>
 							</div>
@@ -317,15 +317,9 @@
 <script>
 	function fCheck(){
 		var f = $("#frm").get(0);
-		form_check(f);
 
 		if(f.type.value == ''){
 			alert("4대보험 항목을 선택해주세요");
-			return false;
-		};
-
-		if(f.card.value == ''){
-			alert("신용카드 유무를 선택해주세요");
 			return false;
 		};
 
@@ -336,19 +330,31 @@
 				return false;
 			};
 
-			if(f.house.value == '미보유'){
-				alert("신청이 완료되었습니다.");
-				window.location.reload();
-				return false;
-			};
-
-
 		};
-
-		if(!f.agree.value){
-			alert('개인정보수집항목 이동에 동의 해주세요');
+		
+		if(f.card.value == ''){
+			alert("신용카드 유무를 선택해주세요");
 			return false;
 		};
+		
+		if(f.name.value == ''){
+			alert("이름을 입력해주세요");
+			return false;
+		};
+
+		if(!f.agree.checked){
+			alert('개인정보수집항목 이용에 동의 해주세요');
+			return false;
+		};
+		
+		if(f.hp2.value.length != '4'){
+			alert("연락처의 중간번호는 4자리로 입력해주세요");
+			return false;
+		}
+		if(f.hp3.value.length != '4'){
+			alert("연락처의 끝번호는 4자리로 입력해주세요");
+			return false;
+		}
 		
 		save();
 	};
@@ -403,22 +409,6 @@
 	</div>
 </div>
 <script>
-
-function form_check(f){
-	if(f.hp2.value.length != '4'){
-		alert("연락처는 4자리로 입력해주세요");
-		return false;
-	}
-	if(f.hp3.value.length != '4'){
-		alert("연락처는 4자리로 입력해주세요");
-		return false;
-	}
-		
-	return "";	
-}
-</script>
-
-<script>
 	jQuery.fn.serializeObject = function () {
 		var obj = null;
 		try {
@@ -450,6 +440,8 @@ function form_check(f){
 					complete: function (xhr, status) {
 						console.log(xhr);
 						console.log(status);
+						alert("신청이 완료되었습니다.");
+						window.location.reload();
 					}
 				}
 		);
