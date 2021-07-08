@@ -462,7 +462,7 @@ function form_check(f){
       $(window).scroll(function(){
         var st = $(this).scrollTop();
         for(var i = 0 ; i <cont.length; i++){
-          if(st >= cont.eq(i).offset().top - $(window).height()/5 ){
+          if(st >= cont.eq(i).offset().top - $(window).height()/6 ){
       		cont.eq(i).addClass("show");
           }
         }
