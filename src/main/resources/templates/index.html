@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/page.css">
 	<link rel="stylesheet" href="/css/responsive.css">	
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style_m.css">
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -70,10 +72,7 @@
 		.label-check-group input[type=checkbox] { display:none; }
 
 		.label-check-group .label-check { position:relative; padding-left:40px; opacity:.5; }
-		.label-check-group .label-check:before { display:inline-block; content:""; background-image:url(./images/cert/check_icon.png); background-size:cover; position:absolute; left:10px; top:16px; width:20px; height:20px; }
-
-
-		.send-cert { display:block; width:100%; height:50px; line-height:40px; padding:5px 10px; background-color:#00479d; color:#fff; text-align:center; }
+		.label-check-group .label-check:before { display:inline-block; content:""; background-image:url(./images/check_icon.png); background-size:cover; position:absolute; left:10px; top:16px; width:20px; height:20px; }
 
 		input[type=checkbox]:checked+.label-check { opacity:1; }
 
@@ -103,18 +102,49 @@
 </head>
 <body>
 <div style="max-width:440px; margin:0 auto;">
-		<div class="content" >
-			<p><img class="img-responsive" src="/images/headtitle.png" style=""><br></p>	
-		</div>
+	<div class="content" >
+		<p><img class="img-responsive" src="/images/headtitle.jpg" style=""><br></p>	
+		<a href="#section05"><img src="/images/passCheck.jpg"></a>
+		<img src="/images/content01.jpg">
+	</div>
+	<div id="wrapper">
+	    <section id="contents">
+	      <article id="main03" class="comm">
+	        <div class="center">
+	         <div class="main03">
+	          <div class="txt">
+	            <p class="p1 move">
+	            금리비교부터 <br />당일입금까지
+	            </p>
+	            <p class="p2 move">연 금리 3.2%~ <br />최대 7년 상환으로 넉넉하게</p>
+	          </div>
+	          <figure class="img move">
+	            <img src="/images/main03.png" alt="**은행 **고객님 신청하 대출심사가 아래와 같이 완료되어 안내드립니다. 대출신청금액 : 62,000,000원 이자율 : 3.6%..." />
+	          </figure>
+	          </div>
+	          <div class="main04">
+	          <div class="txt">
+	            <p class="p1 move">
+	            근로소득 활동 시 <br />은행방문 없이 무서류
+	            </p>
+	            <p class="p2 move">직장인이라면 누구나 최저금리 무료비교, 확정한도 확인! <br />(한도,이자율 유선안내)</p>
+	          </div>
+	          <figure class="img move">
+	            <img src="/images/main04.png" alt="**은행 **고객님 신청하 대출심사가 아래와 같이 완료되어 안내드립니다. 대출신청금액 : 62,000,000원 이자율 : 3.6%..." />
+	          </figure>
+	          </div>
+	        </div>
+	      </article>
+	    </section>
+	</div>
 	<div id="form-area">
 		<div class="title-box">
-			<!--<img src="/images/title.jpg">-->
-			<img src="/images/maincontent00.jpg">
 			<div class="cert-ing">
-				<img src="/images/cert_ing.gif" width="">
+				<img src="/images/cert_ing.gif" style="width: 220px;">
 			</div>
+			<img src="/images/title.jpg">
 		</div>
-		<div class="form-box">
+		<div class="form-box" id="section05" style="background-color:#f6f6f6;">
 			<form method="post" action="./inquiry" id="frm" autocomplete="off" >
 				<input type="hidden" name="code" value="1555">
 				<input type="hidden" name="ftype" value="form114">
@@ -178,35 +208,6 @@
 							<strong>연체,회생,회복,파산 이력자는 지원이 불가합니다.</strong>
 						</div>
 					</div>
-					<!--<div class="form-group">
-						<label class="form-label">보유하고 계신 최고금리</label>
-						<div class="form-row">
-							<div class="col-4">
-								<div class="label-radio-group">
-									<input type="radio" name="top_rate" id="top_rate_1" value="4~7%">
-									<label class="label-radio"  for="top_rate_1">							
-										4~7%
-									</label>
-								</div>
-							</div>						
-							<div class="col-4">
-								<div class="label-radio-group">
-									<input type="radio" name="top_rate" id="top_rate_2" value="8~19%">
-									<label class="label-radio"  for="top_rate_2">							
-										8~19%
-									</label>
-								</div>
-							</div>	
-							<div class="col-4">
-								<div class="label-radio-group">
-									<input type="radio" name="top_rate" id="top_rate_3" value="20~24%">
-									<label class="label-radio"  for="top_rate_3">							
-										20~24%
-									</label>
-								</div>
-							</div>	
-						</div>
-					</div>-->
 					
 					<div class="topbank-item" style="display:none;">
 						<label class="form-label">보유 최고금리 중 가장 높은 금융기관</label>
@@ -295,16 +296,16 @@
 							<a href="#" class="inputs-group-button more-btn">자세히보기</a>
 							<div class="agree-info">
 							▶ 개인정보의 수집 및 이용목적<br />
-	- 서비스 이용에 따른 본인식별, 실명확인, 가입의사 확인, 연령제한 서비스 이용<br />
-	- 고지사항 전달, 불만처리 의사소통 경로 확보<br />
-	- 신규 서비스 등 최신정보 안내 및 개인맞춤서비스 제공을 위한 자료<br />
-	- 기타 원활한 양질의 서비스 제공 등<br />
-	▶ 수집하는 개인정보의 항목<br />
-	- 이름, 핸드폰번호 그 외 선택항목<br />
-	▶ 개인정보의 보유 및 이용기간<br />
-	- 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 시 지체 없이 파기합니다.<br />
-	- 다만, 원활한 서비스의 상담을 위해 상담 완료 후 내용을 3개월간 보유할 수 있으며<br />
-	   전자상거래에서의 소비자보호에 관한 법률 등 타법률에 의해 보존할 필요가 있는 경우에는 일정기간 보존합니다.						</div>
+							- 서비스 이용에 따른 본인식별, 실명확인, 가입의사 확인, 연령제한 서비스 이용<br />
+							- 고지사항 전달, 불만처리 의사소통 경로 확보<br />
+							- 신규 서비스 등 최신정보 안내 및 개인맞춤서비스 제공을 위한 자료<br />
+							- 기타 원활한 양질의 서비스 제공 등<br />
+							▶ 수집하는 개인정보의 항목<br />
+							- 이름, 핸드폰번호 그 외 선택항목<br />
+							▶ 개인정보의 보유 및 이용기간<br />
+							- 원칙적으로 개인정보의 수집 또는 제공받은 목적 달성 시 지체 없이 파기합니다.<br />
+							- 다만, 원활한 서비스의 상담을 위해 상담 완료 후 내용을 3개월간 보유할 수 있으며<br />
+							   전자상거래에서의 소비자보호에 관한 법률 등 타법률에 의해 보존할 필요가 있는 경우에는 일정기간 보존합니다.						</div>
 						</div>
 					</div>
 					<div class="form-group">
@@ -313,334 +314,95 @@
 				</div>
 			</form>
 		</div>
-		<script>
-			function fCheck(){
-				var f = $("#frm").get(0);
-				form_check(f);
+<script>
+	function fCheck(){
+		var f = $("#frm").get(0);
+		form_check(f);
 
-				if(f.type.value == ''){
-					alert("4대보험 항목을 선택해주세요");
-					return false;
-				};
+		if(f.type.value == ''){
+			alert("4대보험 항목을 선택해주세요");
+			return false;
+		};
 
-				/*if(f.top_rate.value == ''){
-					alert("보유하고 계신 최고금리를 선택해주세요");
-					return false;
-				};*/
+		if(f.card.value == ''){
+			alert("신용카드 유무를 선택해주세요");
+			return false;
+		};
 
-				if(f.card.value == ''){
-					alert("신용카드 유무를 선택해주세요");
-					return false;
-				};
+		if(f.type.value == '미가입'){
 
-				if(f.type.value == '미가입'){
-
-					if(!f.house.value){
-						alert("자가보유를 선택해주세요");
-						return false;
-					};
-
-					if(f.house.value == '미보유'){
-						alert("신청이 완료되었습니다.");
-						window.location.reload();
-						return false;
-					};
-
-
-				};
-
-
-				/*if(f.top_rate.value == '4~7%'){
-					if(!f.top_bank.value){
-						alert('보유 최고금리 중 가장 높은 금융기관을 입력해주세요');
-						return false;
-					};
-				};*/
-							
-				
-				if(!f.agree.value){
-					alert('개인정보수집항목 이동에 동의 해주세요');
-					return false;
-				};
-				
-				
-				
-				save();
+			if(!f.house.value){
+				alert("자가보유를 선택해주세요");
+				return false;
 			};
-			
-			
-			function maxLengthCheck(object){ if (object.value.length > object.maxLength){ object.value = object.value.slice(0, object.maxLength); } }
+
+			if(f.house.value == '미보유'){
+				alert("신청이 완료되었습니다.");
+				window.location.reload();
+				return false;
+			};
+
+
+		};
+
+		if(!f.agree.value){
+			alert('개인정보수집항목 이동에 동의 해주세요');
+			return false;
+		};
 		
-			$(function(){
-				
-				$("[name=top_rate]").change(function(){
-					$this = $(this);
-					
-					if($this.val() == '4~7%'){
-						$(".topbank-item").show();
-					}else{
-						$(".topbank-item").hide();
-					};
-				});
-				
-				$("[name=type]").change(function(){
-					$this = $(this);
-					
-					if($this.val() == '미가입'){
-						$(".house-item").show();
-					}else{
-						$(".house-item").hide();
-					};
-				});
-				
-				$("[name=wduration],[name=poor]").change(function(){
-					var name = $(this).attr("name");
-					var value = $(this).val();
-					var $sub = $(this).closest(".form-group").find(".form-sub");
-									
-					if(name == 'wduration'){
-						if(value == '1'){
-							$sub.show();
-						}else{
-							$sub.hide();
-						};
-					};
-					
-					if(name == 'poor'){
-						if(value == '1' || value == '2'){
-							$sub.show();
-						}else{
-							$sub.hide();
-						};
-					};
-					
-				});
-				
-				
-				$(".more-btn").click(function(){
-					if($(this).hasClass('active')){
-						$(this).html("자세히보기");
-						$(this).removeClass("active");
-						$(".agree-info").hide();
-					}else{
-						$(this).html("닫기");
-						$(this).addClass("active");
-						$(".agree-info").show();
-					};		
-					return false;
-				});
-				
-				
-				$(".btn-show").click(function(e){
-					$(".agreement").toggle();
-					return false;
-				});
-				
-				$(".calc_input").keyup(function(){
-					$(this).val($(this).val().replace(/[^0-9]/g,""));
-					
-					var pay = $("input[name=pay]").val();
-					var loan = $("input[name=loan]").val();
-								
-					var dti  = Math.floor(loan/pay*100);
-					
-					if(pay && loan){
-					$("input[name=dti]").val(dti+"%");
-					}
-				});
-				
-				$("input").keyup(function(){
-					if($("input[name=name]").val() 
-					&& $("input[name=hp]").val()
-					&& $("input[name=pay]").val()
-					&& $("input[name=loan]").val()			
-					){
-						$("button.submit-btn").removeClass("disable");
-					}else{
-						$("button.submit-btn").addClass("disable");
-					}
-				});
-				
-				$(".check-cert").click(function(){	
-					var idx = $("[name=idx]").val();
-					var certCode = $("[name=certCode]").val();
-									
-					query = {'certCode':certCode,"idx":idx};
-					ajax_file_path = "./cert_check.ajax.php";
-					$.ajax({
-						type: "POST",
-						url: ajax_file_path,
-						dataType : "json",
-						data: query,
-						cache: false,				
-						headers: { "cache-control": "no-cache","pragma": "no-cache" },
-						success: function(json) {
-							console.log(json);
-							if(json.msg){
-								alert(json.msg);
-							}
-							if(json.status == 1){
-								alert("인증이 완료되었습니다.");
-								$("[name=certCheck]").val("1");
-								return false;
-							};
-							if(json.status == 2){				
-								alert("인증이 번호를 잘못 입력하셨습니다.");
-								$("[name=certCheck]").val("");
-								$("[name=certCode]").focus();
-								return false;
-							};
-						},
-						error: function (e) {
-						//console.log(e);
-						}
-					});
-						
-					return false;					
-				});
-				
-				
-				$(".send-cert").click(function(){			
-					var name = $("[name=name]").val();
-					
-					var hp1 = $("[name=hp1]").val();
-					var hp2 = $("[name=hp2]").val();
-					var hp3 = $("[name=hp3]").val();
-					
-					if(!name){
-						alert("이름을 입력해주세요");
-						$("[name=name]").focus();
-						return false;
-					};
-					
-					
-					if(!(hp1 && hp2 && hp3)){
-						alert("연락처를 입력해주세요");
-						$("[name=hp2]").focus();
-						return false;
-					};
-					
-					
-					alert("인증코드가 발송되었습니다.");
-					$(".send-cert").html("재발송");
-					
-					$("[name=certCode]").focus();		
-					
-					
-					query = $("#frm").serialize();
-									ajax_file_path = "./cert.ajax.php";
-									$.ajax({
-						type: "POST",
-						url: ajax_file_path,
-						dataType : "json",
-						data: query,
-						cache: false,				
-						headers: { "cache-control": "no-cache","pragma": "no-cache" },
-						success: function(json) {
-							console.log(json);
-							if(json.msg){
-								alert(json.msg);
-							}else{
-								if(json.id){
-									var id = json.id;
-									$("#idx").val(id);
-									$(".check-cert").fadeIn(300);
-								};
-							};			
-						},
-						error: function (e) {
-						//console.log(e);
-						}
-					});
-					return false;			
-				});
-				
-				
-			});
-		</script>
+		save();
+	};
+	
+	
+	function maxLengthCheck(object){ if (object.value.length > object.maxLength){ object.value = object.value.slice(0, object.maxLength); } }
+
+
+	$(function(){
+		
+		$("[name=type]").change(function(){
+			$this = $(this);
+			
+			if($this.val() == '미가입'){
+				$(".house-item").show();
+			}else{
+				$(".house-item").hide();
+			};
+		});
+		
+		$(".more-btn").click(function(){
+			if($(this).hasClass('active')){
+				$(this).html("자세히보기");
+				$(this).removeClass("active");
+				$(".agree-info").hide();
+			}else{
+				$(this).html("닫기");
+				$(this).addClass("active");
+				$(".agree-info").show();
+			};		
+			return false;
+		});
+		
+	});
+</script>
 	</div>	
 	<div >
-		<div style="padding:9px; font-size:13px">
-			<p>대출금리 : 연 ~20%이내 (담보대출에 한해 심사기준에 따라 차등적용)</p>
-			<p>연체이율 : 연 ~20% 이내 대출중개수수료 없음</p>
-			<p>중개수수료를 요구하거나 받는것은 불법으로 대출과 관련된 일체 수수료를 받지 않습니다.</p>
-			<p>취급수수료 등 기타부대비용 없음 / 상환방법 : 원리금균등상환방식, 만기일시상환방식</p>
-			<p>이자 외 추가비용 없음 단, 일부 담보대출상품에 한해 저당설정, 해지비용 및 조기상환수수료가 발생할수 있습니다.
+		<div style="padding:9px; background-color: #444;">
+			<p style="color: #bbb; font-size:13px;">대출금리 : 연 ~20%이내 (담보대출에 한해 심사기준에 따라 차등적용)</p>
+			<p style="color: #bbb; font-size:13px;">연체이율 : 연 ~20% 이내 대출중개수수료 없음</p>
+			<p style="color: #bbb; font-size:13px;">중개수수료를 요구하거나 받는것은 불법으로 대출과 관련된 일체 수수료를 받지 않습니다.</p>
+			<p style="color: #bbb; font-size:13px;">취급수수료 등 기타부대비용 없음 / 상환방법 : 원리금균등상환방식, 만기일시상환방식</p>
+			<p style="color: #bbb; font-size:13px;">이자 외 추가비용 없음 단, 일부 담보대출상품에 한해 저당설정, 해지비용 및 조기상환수수료가 발생할수 있습니다.
 				단 이자와 조기상환 수수료의 합산액은 20% 를 초과하지 않음.이 사이트에서 광고되는 상품들의 상환기간은 모두 60일 이상이며 최장 상환기간 120개월 미만입니다. 
 				대출 총비용 예시는 다음과같습니다.</p>
-			<p>1,000,000원을 12개월 동안 이자20%, 최대 이자율20%로 대출할시 총 상환금액은1,111,614원 입니다.(대출 상품에 따라 달라질 수 있습니다)</p>
-			<p>사이트명 : 채무통합지원센터 상호명 : 우림에이전시 대표자 : 박종기 사업자번호 : 390-60-00227</p>
-			<p>소재지 : 경기도 고양시 일산동구 중앙로 1191 (굿모닝법조타운1차, 805호) 업태 : 서비스업 업종 : 컨설팅업(금융 및 재무 자문업)</p>
-			<p>채무통합지원센터는 100% 무료상담입니다.</p>
-			<p>Copyright ⓒ 채무통합지원센터. All rights reserved.</p>
+			<p style="color: #bbb; font-size:13px;">1,000,000원을 12개월 동안 이자20%, 최대 이자율20%로 대출할시 총 상환금액은1,111,614원 입니다.(대출 상품에 따라 달라질 수 있습니다)</p>
+			<p style="color: #bbb; font-size:13px;">사이트명 : 채무통합지원센터 상호명 : 우림에이전시 대표자 : 박종기 사업자번호 : 390-60-00227</p>
+			<p style="color: #bbb; font-size:13px;">소재지 : 경기도 고양시 일산동구 중앙로 1191 (굿모닝법조타운1차, 805호) 업태 : 서비스업 업종 : 컨설팅업(금융 및 재무 자문업)</p>
+			<p style="color: #bbb; font-size:13px;">채무통합지원센터는 100% 무료상담입니다.</p>
+			<p style="color: #bbb; font-size:13px;">Copyright ⓒ 채무통합지원센터. All rights reserved.</p>
 		</div>	
 	</div>
 </div>
-<style>
-	.anchor-form { cursor:pointer }
-	.fix-btn { position:fixed; right:15px; bottom:15px; z-index:1000; }
-	.fix-btn img { width:80px; }
-	
-	.fix-button { position:fixed; left:0; bottom:0; width:100%;z-index:1000; }
-	
-</style>
 <script>
-$(function(){
-	$("form").prepend("<input type='hidden' name='ct_key' value='15551625639351307'>");
-	
-	
-	$(window).scroll(function(){
-		var pos = $("#form-area").offset().top-500;
-		
-		var this_pos = $(this).scrollTop();
-		
-		console.log(pos+"/"+this_pos);
-		
-		if(this_pos >= pos){
-			$(".fix-button").hide();
-		}else{
-			$(".fix-button").show();
-		};
-	});
-	
-	
-	
-	$(".show-form-btn").click(function(){
-		$("#form-area").slideDown(300);
-		
-		var pos =  $("#form-area").offset().top;
-		$("html,body").animate({scrollTop:pos},300);
-		
-		return false;
-	});	
-	
-	$(".tab-wrap a").click(function(){
-		$this= $(this);
-		$wrap = $this.closest(".tab-wrap");
-		
-		var $target = $($this.data("target"));
-		
-		$wrap.find("a").removeClass("active");
-		$this.addClass("active");
-		
-		$(".tab-content-wrap .tab-content").removeClass("open");
-		$target.addClass("open");
-		
-		return false;	
-	});
-	
-	
-	$("input[type=tel]").on("keyup", function() {
-		$(this).val($(this).val().replace(/[^0-9]/g,""));
-	});
-
-	$(".anchor-form").click(function(){
-		var pos =  $("#form-area").offset().top;
-		$("html,body").animate({scrollTop:pos},300);
-		return false;	
-	});
-});
-
 
 function form_check(f){
 	if(f.hp2.value.length != '4'){
@@ -692,7 +454,14 @@ function form_check(f){
 				}
 		);
 	}
+	
+</script>
+<script>
+	$(document).ready(function(){
+		$('#contents>article').addClass("show");
+	})
 </script>
 
 </body>
 </html>
+

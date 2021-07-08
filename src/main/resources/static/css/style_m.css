@@ -1,0 +1,73 @@
+@media screen and (max-width: 800px) {
+  html, body { letter-spacing: -0.03em; font-size: 62.5%; }
+  section, article, header, footer, nav, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, img, a, form, input, select, option, fieldset, textarea, button, label, figure { font-size: 1.4rem; }
+  .center { width: 90%; }
+  /*========= header ===========*/
+  #header { top: 20px; }
+  #header h1 a { line-height: 30px; font-size: 1.8rem; color: #fff; }
+  /*========= main ===========*/
+  #main01 { height: auto; background-image: url(/images/m01.jpg); background-size: cover; }
+  #main01 .txt { position: static; width: 100%; height: 100%; padding: 150px 0; -webkit-transform: translate(0, 0); transform: translate(0, 0); background-color: rgba(0, 0, 0, 0.3); }
+  #main01 .txt p { text-align: center; line-height: 1.4; font-size: 3rem; color: #fff; }
+  #main01 .txt a { width: 150px; line-height: 40px; margin: 0 auto; margin-top: 40px; font-size: 1.4rem; color: #fff; }
+  #main01 .txt h6{color:#fff; font-size:1.4rem; text-align:Center; padding:0 20px; font-weight:500; }
+  #main02 { padding: 60px 0; background:url(/images/m02.jpg) no-repeat center top; background-size:cover; }
+    #main02 .center{width:90%; float:inherit; margin:0 auto;  }
+  #main02 .center p{ font-size: 2rem; line-height: 1.7; text-align:Center; background:none; padding-left:0; }
+  .comm .center { padding: 0; padding-top: 60px; }
+  .comm .center .txt p { text-align: center; }
+  .comm .center .txt .p1 { line-height: 1.3; font-size: 2.6rem; }
+  .comm .center .txt .p2 { margin-top: 15px; line-height: 1.6; font-size: 1.4rem; }
+  .comm .center .txt .p3 { margin-top: 15px; font-size: 1.3rem; }
+  .comm .center .txt a { width: 150px; margin: 0 auto; margin-top: 20px; line-height: 40px; font-size: 1.4rem; }
+  .comm .center .img, .comm .center .info { position: static; width: 100%; max-width: 400px; height: auto; margin: 0 auto; margin-top: 40px; }
+  .comm .center .img img { width: 100%; height: auto; }
+  .comm .center .info { -webkit-transform: translateY(0); transform: translateY(0); }
+  .comm .center .info li { margin-bottom: 40px; line-height: 50px; background-position: 15px center; background-size: 20px auto; font-size: 1.45rem; width:50%; }
+  #main05 .center { padding-bottom: 20px; }
+  #main06 .center { padding-left: 0%; }
+    .comm .center .info li h5{line-height:1.5; font-size:1.8rem; }
+    .comm .center .info li p{font-size:1.3rem; }
+    .comm .center .info li .icon{margin:0 auto 10px; }
+    
+    
+    #main03 {background:none; width:100%; }
+    #main03 .center {padding:0; width:100%; }
+    #main03 .main03{float:inherit; width:100%; padding-bottom:0; padding-top:70px; background:#f6f6f6; }
+    #main03 .main04{float:inherit; width:100%; padding-bottom:0; padding-top:70px; background:#f0f0f0; }
+    #main03 .center .img{ transform:translateX(0);}
+
+
+  .ip_chk + label {line-height:44px; font-size:14px; text-align: center;}
+  .set_agree {margin-top:20px; }
+  .set_agree label,
+  .set_agree a {font-size:14px;}
+
+  #btn_fsubmit{ line-height:50px; height:50px; font-size:20px; margin:10px 0 20px;}
+
+  #section05 {padding:30px 0 10px;}
+  #section05 .center {width: 90%;}
+  #section05 .tit p{font-size:20px;  margin-bottom:8px;  }
+  #section05 .tit h3{font-size:27px;  margin-bottom:25px;  }
+  #section05 .tit h5{font-size:27px;  margin-bottom:25px; line-height:30px;}
+  #section05 .tit h5 span{font-size:20px;}
+  #section05 .form_wrap{width:100%; background:#fff; padding:5%;}
+  #section05 .form_wrap>img{margin:0 auto; display:block; width:40%;}
+  #section05 .form_wrap label{font-size:14px; margin-bottom:10px;}
+  #section05 .form_wrap p{ font-size:14px; margin-bottom:10px;}
+  #section05 .form_wrap input{font-size:15px; padding:10px; margin-bottom:20px; height:44px; line-height:44px;}
+  #section05 .form_wrap select{ font-size:15px; height:44px; line-height:44px; background-size:15px;}
+  #section05 .form_wrap .man h6{right:14px; bottom:15px; font-size:15px; }
+  #section05 .cert_txt{margin-bottom:20px; font-size:13px;}
+
+  #footer{}
+  #footer .caution {line-height:1.5; font-size: 1.3rem; }
+  #footer .info {font-size: 1.3rem;}
+  #footer .copyright {font-size:1.3rem;}
+  #footer .copyright a {  font-size:inherit; }
+  #footer h3{font-size:1.3rem; }
+  #footer h3 br.none{display:none;}
+
+}
+
+/*# sourceMappingURL=style_m.css.map */
