@@ -14,8 +14,7 @@ import javax.persistence.Id;
 public class TelegramChat {
 	@Id
 	private Long chatId;
-	private String userName;
-	private String firstName;
-	private String lastName;
+	private String title;
+	private String type;
 	private boolean start;
 }

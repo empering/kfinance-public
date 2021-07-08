@@ -18,13 +18,16 @@ public class TelegramMessageSender {
 		List<TelegramChat> chats = telegramChatRepository.findAll();
 
 		for (TelegramChat chat : chats) {
-			if (chat.isStart()) {
-				SendMessage sendMessage =
-						new SendMessage(chat.getChatId(), message)
-								.disableNotification(false);
+			this.sendMessage(message, chat.getChatId(), chat.isStart());
+		}
+	}
 
-				telegramBot.execute(sendMessage);
-			}
+	public void sendMessage(String message, Long chatId, boolean isStart) {
+		if (isStart) {
+			SendMessage sendMessage =
+					new SendMessage(chatId, message).disableNotification(false);
+
+			telegramBot.execute(sendMessage);
 		}
 	}
 }
