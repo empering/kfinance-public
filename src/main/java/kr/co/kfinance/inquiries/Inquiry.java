@@ -19,7 +19,6 @@ public class Inquiry {
 	private Long id;
 	private String name;
 	private String hp;
-	private String email;
 	private String type;
 	private String house;
 	private String card;
