@@ -2,6 +2,8 @@ package kr.co.kfinance.configs;
 
 import kr.co.kfinance.inquiries.Inquiry;
 import kr.co.kfinance.inquiries.InquiryRepository;
+import kr.co.kfinance.managers.Manager;
+import kr.co.kfinance.managers.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -20,11 +22,24 @@ public class ApplicationMockData {
 		return new ApplicationRunner() {
 
 			@Autowired
+			ManagerService managerService;
+
+			@Autowired
 			InquiryRepository inquiryRepository;
 
 			@Override
 			public void run(ApplicationArguments args) {
+				this.generateManager();
 				IntStream.range(0, 50).forEach(this::generateInquiry);
+			}
+
+			private void generateManager() {
+				Manager manager = Manager.builder()
+						.name("manager")
+						.password("password")
+						.build();
+
+				managerService.saveManager(manager);
 			}
 
 			private void generateInquiry(int index) {
