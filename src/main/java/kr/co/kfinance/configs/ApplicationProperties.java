@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "app")
 @Getter
 @Setter
-public class AppProperties {
+public class ApplicationProperties {
 	private String telegrambotToken;
 }

@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class TelegramBotProdConfig {
 
-	final AppProperties appProperties;
+	final ApplicationProperties appProperties;
 
 	final TelegramChatRepository telegramChatRepository;
 
