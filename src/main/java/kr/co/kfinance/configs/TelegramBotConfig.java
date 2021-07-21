@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class TelegramBotConfig {
 
-	final AppProperties appProperties;
+	final ApplicationProperties appProperties;
 
 	@Bean
 	public TelegramBot telegramBot() {
