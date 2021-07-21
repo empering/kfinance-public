@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Front End ###
+**/vue/node_modules/
+**/vue/dist/
+**/static/vue/
