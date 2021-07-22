@@ -176,7 +176,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>src/main/resources/static/vue</outputDirectory>
+                            <outputDirectory>src/main/resources/templates</outputDirectory>
                             <overwrite>true</overwrite>
                             <resources>
                                 <resource>
