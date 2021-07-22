@@ -3,9 +3,10 @@
     <thead>
     <tr>
       <th v-for="key in columns"
+          v-bind:key="key"
           @click="sortBy(key)"
           :class="{ active: sortKey == key }">
-        {{ key | capitalize }}
+        {{ key }}
         <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
           </span>
       </th>
@@ -60,11 +61,6 @@ export default {
         })
       }
       return heroes
-    }
-  },
-  filters: {
-    capitalize: function (str) {
-      return str.charAt(0).toUpperCase() + str.slice(1)
     }
   },
   methods: {
