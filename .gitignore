@@ -34,5 +34,6 @@ build/
 
 ### Front End ###
 **/vue/node_modules/
+**/vue/node/
 **/vue/dist/
 **/static/vue/
